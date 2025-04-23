@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Root Calculator</title>
+</head>
+<body>
+    <h2>Square Root Calculator</h2>
+
+    <input type="number" id="number" placeholder="Enter a number">
+    <button onclick="findSquareRoot()">Find Square Root</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findSquareRoot() {
+            // Get the value from the input
+            var num = parseFloat(document.getElementById("number").value);
+
+            // Check if input is a valid number
+            if (isNaN(num)) {
+                document.getElementById("result").textContent = "Please enter a valid number.";
+                return;
+            }
+
+            // Calculate the square root
+            var squareRoot = Math.sqrt(num);
+
+            // Display the result
+            document.getElementById("result").textContent = "Square Root: " + squareRoot;
+        }
+    </script>
+</body>
+</html>

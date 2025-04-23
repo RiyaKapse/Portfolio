@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riya Rajendra Kapse - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 5px;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #f57c00;
+      border-bottom: 2px solid #f57c00;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '🎓 ';
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    .info-box {
+      background-color: #fdf3e7;
+      border-left: 5px solid #f57c00;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-container {
+      background-color: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="number"],
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #f57c00;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d45500;
+    }
+
+    .doc-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .doc-card {
+      flex: 1 1 calc(50% - 20px);
+      background-color: #ffe0b2;
+      padding: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .doc-card {
+        flex: 1 1 100%;
+      }
+    }
+
+    .quote-box {
+      background-color: bisque;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-box .quote {
+      font-size: 20px;
+      font-style: italic;
+      color: #333;
+    }
+
+    .quote-box button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .quote-box button:hover {
+      background-color: #45a049;
+    }
+
+    .slider {
+      width: 100%;
+      max-width: 700px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 30px auto;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .buttons button {
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+    <section>
+        <h2>ISE 3 - Image Slider</h2>
+        <div class="slider">
+          <div class="slides" id="slideContainer">
+            <img src="https://media.istockphoto.com/id/1394440950/photo/natural-view-cosmos-filed-and-sunset-on-garden-background.webp" alt="Slide 1">
+            <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg" alt="Slide 2">
+            <img src="https://thumbs.dreamstime.com/b/beautiful-amazing-purple-flower-field-landscape-sunset-nature-wallpaper-background-phacelia-280402570.jpg" alt="Slide 3">
+            <img src="https://cdn.clippingpath.in/wp-content/uploads/2023/07/14.-Daisy-field-landscape-for-wallpapers.webp" alt="Slide 4">
+            <img src="https://wallpapers.com/images/hd/stunning-blooming-flowers-amid-lush-landscape-9y5x61tdi7w7yzk4.jpg" alt="Slide 5">
+            <img src="https://images6.alphacoders.com/515/thumb-1920-515820.jpg" alt="Slide 6">
+          </div>
+          <div class="buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+          </div>
+        </div>
+      </section>
+      <script>
+        const quotes = [
+          "THE ONLY WAY TO DO GREAT WORK IS TO LOVE WHAT YOU DO!",
+          "YOU ONLY LIVE ONCE!",
+          "IT ONLY SEEMS IMPOSSIBLE UNTIL IT'S DONE",
+          "SUCCESS IS NOT FINAL, FAILURE IS NOT FATAL: IT IS THE COURAGE TO CONTINUE THAT COUNTS",
+          "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE",
+          "HONESTY IS THE BEST POLICY",
+          "TRY TRY BUT DON'T CRY!",
+        ];
+    
+        function generateQuote() {
+          const randomIndex = Math.floor(Math.random() * quotes.length);
+          document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    
+        const slideContainer = document.getElementById('slideContainer');
+        const slides = slideContainer.querySelectorAll('img');
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+          if (index >= slides.length) currentIndex = 0;
+          else if (index < 0) currentIndex = slides.length - 1;
+          else currentIndex = index;
+          const offset = -currentIndex * 100;
+          slideContainer.style.transform = `translateX(${offset}%)`;
+        }
+    
+        function nextSlide() {
+          showSlide(currentIndex + 1);
+        }
+    
+        function prevSlide() {
+          showSlide(currentIndex - 1);
+        }
+    
+        function generateRandomString() {
+          const length = parseInt(document.getElementById("randomLength").value);
+          const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          let result = '';
+          for (let i = 0; i < length; i++) {
+            result += chars.charAt(Math.floor(Math.random() * chars.length));
+          }
+          document.getElementById("randomResult").innerText = "Random String: " + result;
+        }
+    
+        function checkLeapYear() {
+          const year = parseInt(document.getElementById("yearInput").value);
+          const isLeap = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+          document.getElementById("leapResult").innerText = isLeap ? `${year} is a Leap Year ✅` : `${year} is Not a Leap Year ❌`;
+        }
+    
+        function updateDateTime() {
+          const now = new Date();
+          document.getElementById("dateTimeDisplay").innerHTML = `Date: ${now.toLocaleDateString()}<br>Time: ${now.toLocaleTimeString()}`;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    
+        function compareStrings() {
+          const str1 = document.getElementById('string1').value;
+          const str2 = document.getElementById('string2').value;
+          const result = document.getElementById('compareResult');
+          if (str1 === str2) {
+            result.innerText = "✅ The strings are exactly the same!";
+            result.style.color = "green";
+          } else {
+            result.innerText = "❌ The strings are different.";
+            result.style.color = "red";
+          }
+        }
+      </script>
+    </body>
+    </html>

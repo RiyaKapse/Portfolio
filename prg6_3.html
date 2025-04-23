@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Substring Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #023e8a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Check if String Contains Substring</h1>
+  <input type="text" id="mainString" placeholder="Enter main string"><br>
+  <input type="text" id="subString" placeholder="Enter substring"><br>
+  <button onclick="checkSubstring()">Check</button>
+  <div id="result"></div>
+
+  <script>
+    function checkSubstring() {
+      const main = document.getElementById("mainString").value;
+      const sub = document.getElementById("subString").value;
+      const result = document.getElementById("result");
+
+      if (main.includes(sub)) {
+        result.textContent = `"${sub}" is found in the main string! ✅`;
+      } else {
+        result.textContent = `"${sub}" is NOT found in the main string. ❌`;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Current Date and Time</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .datetime {
+      font-size: 28px;
+      color: #333;
+      padding: 20px;
+      border: 2px solid #0077b6;
+      display: inline-block;
+      border-radius: 12px;
+      background-color: #e0f7fa;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Current Date and Time</h1>
+  <div class="datetime" id="dateTimeDisplay">
+    Loading...
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const dateString = now.toLocaleDateString();
+      const timeString = now.toLocaleTimeString();
+      document.getElementById('dateTimeDisplay').innerHTML = 
+        `Date: ${dateString}<br>Time: ${timeString}`;
+    }
+
+    // Update immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
+
+</body>
+</html>

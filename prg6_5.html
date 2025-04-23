@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 50px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      width: 300px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: #0284c7;
+      color: white;
+      border: none;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Compare Two Strings</h1>
+  <input type="text" id="string1" placeholder="Enter first string"><br>
+  <input type="text" id="string2" placeholder="Enter second string"><br>
+  <button onclick="compareStrings()">Compare</button>
+
+  <div id="result"></div>
+
+  <script>
+    function compareStrings() {
+      const str1 = document.getElementById('string1').value;
+      const str2 = document.getElementById('string2').value;
+      const resultDiv = document.getElementById('result');
+
+      if (str1 === str2) {
+        resultDiv.textContent = "✅ The strings are exactly the same!";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.textContent = "❌ The strings are different.";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
